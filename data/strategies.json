@@ -1,0 +1,22 @@
+{
+    "STRATEGY_ZERO_SHOT": {
+        "title": "Zero-Shot Prompting",
+        "emoji": "🧊",
+        "description": "Ideal when the model can infer what you want without examples."
+    },
+    "STRATEGY_ONE_SHOT": {
+        "title": "One-Shot Prompting",
+        "emoji": "🎯",
+        "description": "Useful when one clear example helps clarify the format or logic."
+    },
+    "STRATEGY_FEW_SHOT": {
+        "title": "Few-Shot Prompting",
+        "emoji": "📚",
+        "description": "Use several examples to teach the model patterns or edge cases."
+    },
+    "STRATEGY_SYSTEM": {
+        "title": "System Prompting",
+        "emoji": "🧠",
+        "description": "Start with a system message to provide context, tone, or task definition."
+    }
+} 
