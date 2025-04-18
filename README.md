@@ -1,84 +1,94 @@
-# Guided QA System
+# 🧠 Prompt Architect
 
-A simple guided question and answer system built with Streamlit.
+A sophisticated prompt engineering system built with Streamlit that guides users through creating optimal prompts for AI tasks.
 
-## Setup
+## 🎯 Features
 
-1. Install Poetry if you haven't already:
-```bash
-curl -sSL https://install.python-poetry.org | python3 -
-```
+1. **🔍 Guided Q&A Flow**
+   - Interactive decision tree for prompt strategy selection
+   - Binary and multiple-choice questions
+   - Dynamic navigation based on user responses
 
-2. Install dependencies:
-```bash
-poetry install
-```
+2. **🤖 Smart Recommendation Engine**
+   - Suggests optimal prompting strategies based on user needs
+   - Supports multiple strategies for complex scenarios
+   - Includes Zero-shot, Chain-of-Thought, Role Prompting, and more
 
-3. Run the application:
-```bash
-poetry run streamlit run app.py
-```
+3. **🛠️ Interactive Prompt Builder**
+   - Dynamic input fields based on selected strategy
+   - Support for:
+     - 📝 Task instructions
+     - 📚 Examples (1-shot / few-shot)
+     - ⚙️ System prompts
+     - 👤 Role descriptions
+     - 🌍 Contextual background
+     - 💻 Code snippets
+     - 📊 Output format specifications
+     - 🌡️ Model parameters (temperature, token limits)
 
-## Project Structure
+4. **🔨 Prompt Compiler**
+   - Dynamic prompt assembly
+   - Best practices integration
+   - Real-time preview
+   - Copy/export functionality
+
+5. **📊 Prompt Evaluation**
+   - Test prompts with AI models
+   - Rate outputs using interactive controls
+   - Track improvement history
+   - Receive auto-suggestions for optimization
+
+## 🛠️ Tech Stack
+
+- **🎨 Streamlit** - Modern web interface
+- **🐍 Python 3.11+** - Core programming language
+- **📦 Poetry** - Dependency management
+- **👀 Watchdog** - File system monitoring
+- **🌐 Requests** - HTTP client for API interactions
+
+## 📁 Project Structure
 
 ```
 ./
-├── app.py                 # Main application file
-├── pages/
-│   └── 1_Guided_QA.py    # Main QA page
-├── utils/
-│   └── flow_logic.py     # Question flow logic
-├── data/
-│   └── questions.json    # Question data
-└── pyproject.toml        # Poetry configuration
+├── 🏠 Home.py                # Main application entry point
+├── 📄 pages/                 # Streamlit pages
+│   ├── 1️⃣ 1_Guided_QA.py    # Initial question flow
+│   ├── 2️⃣ 2_Build_Your_Prompt.py  # Prompt construction interface
+│   └── 3️⃣ 3_Evaluate_and_Refine.py  # Prompt testing and refinement
+├── 🛠️ utils/                 # Utility modules
+│   ├── 🔄 flow_logic.py     # Question flow logic
+│   ├── 🧭 navigation.py     # Navigation utilities
+│   └── 📝 logger.py         # Logging configuration
+├── 📚 data/                  # Data files
+│   ├── ❓ questions.json    # Question data
+│   └── 🎯 strategies.json   # Prompting strategies
+├── ⚙️ .streamlit/           # Streamlit configuration
+├── 📦 pyproject.toml        # Poetry configuration
+└── 🔒 poetry.lock           # Dependency lock file
 ```
 
-# MyPrompts
+## 🚀 Getting Started
 
-## 🌟 User Journey Breakdown
+1. **📥 Install Poetry** (if not already installed):
+   ```bash
+   curl -sSL https://install.python-poetry.org | python3 -
+   ```
 
-1. 🧭 Guided Q&A Flow (based on the diagram)
-Users are walked through a set of binary or multiple-choice questions — like a decision tree. Each answer navigates the diagram's logic (e.g., "Do you need specific examples?", "Is the task code-related?").
+2. **📦 Install Dependencies**:
+   ```bash
+   poetry install
+   ```
 
-2.	🧠 Recommendation Engine
-Based on the answers, the app suggests the ideal prompting strategy (e.g., Zero-shot, Chain-of-Thought, Role Prompting, etc.), and possibly more than one if the scenario is complex.
+3. **▶️ Run the Application**:
+   ```bash
+   poetry run streamlit run Home.py
+   ```
 
-3.	✍️ Prompt Builder UI
-Once a strategy is selected, the app shows relevant input fields — such as:
-- Task instructions
-- Examples (1-shot / few-shot)
-- System prompt (if applicable)
-- Role description
-- Contextual background
-- Code snippets (if code-related)
-- Desired output format
-- Temperature, token limit, etc.
+## 📜 License
 
-5.	🧩 Prompt Compiler
-The app dynamically builds the full prompt using best practices and sections the user has filled in. It shows a preview of the final prompt that can be copied or exported.
+This project is licensed under the terms included in the LICENSE file.
 
-6.	🧪 Prompt Evaluation Module
-Users can input the prompt into an OpenAI/GPT call, test the result, and rate the output using sliders, radio buttons, or text feedback.
-Optionally, the system can offer:
-- Auto-suggestions on how to improve it
-- A "history" of attempts
-- A button to restart or tweak parameters
+## 🤝 Contributing
 
-⸻
-
-## 🛠️ Tools & Tech Stack
-
-- Streamlit — Core UI
-- Session State — For storing progress along the decision tree
-- Mermaid.js (via st_mermaid) — To optionally show the original flow diagram inline
-- Prompt Template Builder — Custom Python logic for assembling prompts
-- LLM Integration (optional) — To evaluate the prompts and assist with revisions (e.g., OpenAI API)
-
-⸻
-
-## ✅ Code structured into:
-- main.py
-- prompt_builder.py
-- prompt_templates.py
-- evaluation.py
+Contributions are welcome! Please feel free to submit a Pull Request.
   
